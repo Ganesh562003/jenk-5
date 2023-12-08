@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     // Use the checkout step to clone the Git repository
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: GIT_REPO_URL]]])
+                    checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Ganesh562003/jenk-5.git']])
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Using the Jenkins workspace variable to reference files
-                    bat 'xcopy /y "C:\\Users\\Admin\\Downloads\\nginx-1.24.0 (1)\\nginx-1.24.0\\htmldocs\\index.html" "%NGINX_PATH%"'
+                    bat 'xcopy /y "D:\\20211CDV0011\\jenk-5\\index.html" "%NGINX_PATH%"'
                 }
             }
         }
