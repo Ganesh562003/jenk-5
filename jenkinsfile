@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPO_URL = 'https://github.com/Ganesh562003/lab-5.git'
+        GIT_REPO_URL = 'https://github.com/Ganesh562003/jenk-5.git'
         NGINX_PATH = 'C:\\Users\\Admin\\Downloads\\nginx-1.24.0 (1)\\nginx-1.24.0\\htmldocs'
     }
 
